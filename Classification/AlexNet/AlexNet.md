@@ -3,10 +3,18 @@
 ## 主要内容
 
 - 第一个典型的CNN是LeNet5网络结构，但是第一个引起大家注意的网络却是AlexNet
-- 使用 ReLU 激活函数加速收敛。
-- 使用 GPU 并行，加速训练。也为之后的分组卷积（group convolution）理论奠定基础。
-- 提出局部响应归一化（Local Response Normalization, LRN）增加泛化特性 ，引用生物学概念侧抑制（lateral inhibitio），指的是被激活的神经元抑制相邻神经元。归一化（normalization）的目的是“抑制”，局部归一化就是借鉴了侧抑制的思想来实现局部抑制。(后人证明无效 )
+- 使用 ReLU 激活函数加速收敛。针对这一问题，我们使用线性整流单元 (Rectified Linear Units，ReLU) 作为激活函数。其不存在饱和区，导数始终为 1，梯度更大，计算量也更少，因此收敛更快。
+- 使用 GPU 并行，加速训练。GPU 之间可以直接进行数据交换，而无需经过主机的内存，因此可以很容易进行并行
+- 提出局部响应归一化（Local Response Normalization, LRN）增加泛化特性 ，引用生物学概念侧抑制（lateral inhibitio），指的是被激活的神经元抑制相邻神经元。
+  - 归一化（normalization）的目的是“抑制”，局部归一化就是借鉴了侧抑制的思想来实现局部抑制。(后人证明无效 )
+  - 相当于第i个卷积核所得到的特征图的(x,y)处要除以一个相邻的[i-n/2, i+n/2]卷积核所得到的特征图在(x,y)处的值的平方和。
+$$
+b_{x, y}^{i}=a_{x, y}^{i} /\left(k+\alpha \sum_{j=\max (0, i-n / 2)}^{\min (N-1, i+n / 2)}\left(a_{x, y}^{j}\right)^{2}\right)^{\beta}
+$$
+
 - 使用交叠池化 (Overlapping Pooling) 防止过拟合
+  - 在一般池化中，池化窗口 z 与滑动步长 s 相等。而交叠池化指的就是 s < z的池化，此时相邻的滑窗之间会有重叠。
+  - 使用 overlapping pooling 方式，更不易发生过拟合。
 - 提出Dropout，数据增强等手段防止过拟合
 
 ## 网络架构
