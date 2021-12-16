@@ -11,7 +11,7 @@
 - 提出了mlpconv代替普通的卷积操作，从而来提升抽象能力
 ![](imgs/1.png)
 - 左图是普通卷积，中间卷积核进行滑动卷积从输入得到输出的映射关系很清楚
-- 右图是MLP-conv，在卷积核后面跟了个小网络即MLP，这也是NIN名字的由来。
+- 右图是MLP-conv，在卷积核后面跟了个小网络即MLP，这也是NIN名字的由来。这两层MLP可以用1X1的卷积层来实现，本质上是注意力机制。
 - 计算法
   - Here n is the number of layers in the multilayer perceptron.
   $$
