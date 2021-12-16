@@ -6,7 +6,10 @@
 - VGG: Very Deep Convolutional Networks for Large-Scale Image Recognition
 - Inception
 - ResNet: Deep Residual Learning for Image Recognition
+- DenseNet: Densely Connected Convolutional Networks
 - Xception: Deep Learning with Depthwise Separable Convolutions
+- ResNeXt: Aggregated Residual Transformations for Deep Neural Networks
+- ResNeSt: Split-Attention Networks
 - BigTransfer (waiting...)
 
 ## Basic
