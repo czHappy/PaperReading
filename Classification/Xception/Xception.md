@@ -19,6 +19,16 @@
   and spatial correlations are sufficiently decoupled that it is
   preferable not to map them jointly.
 
+- 普通卷积
+![](./image/35.jpg)
+- 深度卷积
+  - 一组卷积核中的每一片都与输入特征的对应通道卷积，类似于两本书比厚度一样
+  ![](./image/36.jpg)
+- 点卷积
+  - 就是普通卷积，只不过尺寸是1X1，不改变大小只改变通道数。
+  ![](./image/37.jpg)
+
+
 ## 核心结构
 
 - Inception V3

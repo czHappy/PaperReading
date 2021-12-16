@@ -1,9 +1,10 @@
 # PaperReading
 ## Classification
+- LeNet:Gradient-based learning applied to document recognition
+- NIN: Network In Network
 - AlexNet: ImageNet Classification with Deep Convolutional Neural Networks
 - VGG: Very Deep Convolutional Networks for Large-Scale Image Recognition
-- DeepLab: Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs
-- Inception: Going deeper with convolutions
+- Inception
 - ResNet: Deep Residual Learning for Image Recognition
 - Xception: Deep Learning with Depthwise Separable Convolutions
 - BigTransfer (waiting...)
@@ -29,6 +30,7 @@
 
 ## Segmentation
 - Mask R-CNN
+- DeepLab
 - DFANet：Deep Feature Aggregation for Real-Time Semantic Segmentation
 - BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation
 - BiSeNet V2: Bilateral Network with Guided Aggregation for Real-time Semantic Segmentation
