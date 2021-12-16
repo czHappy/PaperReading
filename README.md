@@ -10,7 +10,7 @@
 - Xception: Deep Learning with Depthwise Separable Convolutions
 - ResNeXt: Aggregated Residual Transformations for Deep Neural Networks
 - ResNeSt: Split-Attention Networks
-- BigTransfer (waiting...)
+- BiT: Big Transfer
 
 ## Basic
 - Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
